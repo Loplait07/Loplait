@@ -1,0 +1,32 @@
+﻿@{
+    ViewData["Title"] = "Login";
+}
+
+<div class="container d-flex justify-content-center align-items-center" style="margin: 120px auto;">
+    <div class="card shadow" style="width: 400px;">
+        <div class="card-body">
+            <h2 class="text-center login-title">
+                <span>L</span>
+                <span>o</span>
+                <span>g</span>
+                <span>i</span>
+                <span>n</span>
+            </h2>
+            <hr />
+            <div class="text-center" style="margin-top:30px; margin-bottom:20px;">
+                @* <a class="btn btn-kakao mb-2" asp-controller="Account" asp-action="ExternalLogin" asp-route-provider="Kakao"> *@
+                <a class="btn btn-kakao mb-2">
+                    <span class="kakao-icon"></span>
+                    <span>Continue with Kakao</span>
+                </a>
+            </div>
+            <div class="text-center">
+                @* <a class="btn btn-google mb-2" asp-controller="Account" asp-action="ExternalLogin" asp-route-provider="Google"> *@
+                <a class="btn btn-google mb-2">
+                    <img src="~/google_light.svg" alt="" width="25" height="25">
+                    <span>Continue with Google</span>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>

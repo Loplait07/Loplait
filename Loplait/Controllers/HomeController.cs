@@ -4,11 +4,11 @@ using System.Diagnostics;
 
 namespace Loplait.Controllers
 {
-    public class AccountController : Controller
+    public class HomeController : Controller
     {
-        private readonly ILogger<AccountController> _logger;
+        private readonly ILogger<HomeController> _logger;
 
-        public AccountController(ILogger<AccountController> logger)
+        public HomeController(ILogger<HomeController> logger)
         {
             _logger = logger;
         }
@@ -17,12 +17,6 @@ namespace Loplait.Controllers
         {
             return View();
         }
-
-        public IActionResult Login()
-        {
-            return View();
-        }
-
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
