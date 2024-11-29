@@ -6,3 +6,10 @@ services:
     build:
       context: .
       dockerfile: Loplait/Dockerfile
+    ports:
+      - "80:80"  # HTTP 포트
+      - "443:443"  # HTTPS 포트 (필요한 경우)
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Production
+    volumes:
+      - ./app-data:/app/data 
