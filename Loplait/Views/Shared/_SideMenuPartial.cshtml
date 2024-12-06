@@ -1,24 +1,71 @@
 ﻿<nav class="sidebar">
     <div class="side-menu">
-        <div class="menu-section">
-            <a href="/" class="menu-item">
-                <i class="bi bi-house"></i>
+        <!-- Home -->
+        <a href="/" class="menu-item">
+            <div class="menu-title">
+                <i class="bi bi-house-door"></i>
                 <span>Home</span>
-            </a>
-            <a href="/popular" class="menu-item">
-                <i class="bi bi-graph-up"></i>
-                <span>Popular</span>
-            </a>
-            <a href="/explore" class="menu-item">
-                <i class="bi bi-compass"></i>
-                <span>Explore</span>
-            </a>
+            </div>
+        </a>
+
+        <!-- Information -->
+        <div class="menu-category">
+            <div class="menu-item" onclick="toggleSubmenu('information')">
+                <div class="menu-title">
+                    <i class="bi bi-info-circle"></i>
+                    <span>Information</span>
+                </div>
+                <div class="menu-arrow">⌵</div>
+            </div>
+            <div class="submenu" id="information">
+                <a href="#" class="menu-item">
+                    <span>Tour Map</span>
+                </a>
+                <a href="#" class="menu-item">
+                    <span>Korea is</span>
+                </a>
+                <a href="#" class="menu-item">
+                    <span>Promotions</span>
+                </a>
+            </div>
         </div>
 
-        <div class="menu-divider"></div>
-
-        <div class="menu-section">
-            <div class="section-title">RECENT</div>
+        <!-- Community -->
+        <div class="menu-category">
+            <div class="menu-item" onclick="toggleSubmenu('community')">
+                <div class="menu-title">
+                    <i class="bi bi-people"></i>
+                    <span>Community</span>
+                </div>
+                <div class="menu-arrow">⌵</div>
+            </div>
+            <div class="submenu" id="community">
+                <a href="#" class="menu-item">
+                    <span>Notice</span>
+                </a>
+                <a href="#" class="menu-item">
+                    <span>Free Board</span>
+                </a>
+                <a href="#" class="menu-item">
+                    <span>Q&A</span>
+                </a>
+            </div>
         </div>
     </div>
-</nav>  
+</nav>
+
+<script>
+    function toggleSubmenu(id) {
+        const submenu = document.getElementById(id);
+        const menuItem = event.currentTarget;
+        const arrow = menuItem.querySelector('.menu-arrow');
+
+        if (submenu.style.maxHeight) {
+            submenu.style.maxHeight = null;
+            arrow.style.transform = 'rotate(0deg)';  // 원래 상태로
+        } else {
+            submenu.style.maxHeight = submenu.scrollHeight + "px";
+            arrow.style.transform = 'rotate(180deg)';  // 위로 회전
+        }
+    }
+</script>

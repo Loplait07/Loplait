@@ -27,9 +27,12 @@
                 <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">Loplait</a>
                 <div class="d-block d-sm-none">
                     <div class="d-flex align-items-center">
-                        <a class="btn-login me-2" asp-area="" asp-controller="Account" asp-action="Login">
+                        <a class="btn-login" onclick="showLoginModal()">
                             <span>Login</span>
                         </a>
+                        @* <a class="btn-login me-2" asp-area="" asp-controller="Account" asp-action="Login">
+                            <span>Login</span>
+                        </a> *@
                         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                                 aria-expanded="false" aria-label="Toggle navigation">
                             <span class="navbar-toggler-icon"></span>
@@ -38,15 +41,57 @@
                 </div>
                 <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
                     <ul class="navbar-nav flex-grow-1">
+                        
+                        <div class="d-sm-none mobile-menu">
+                            <!-- Home -->
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                            <a href="/" class="nav-link">
+                                <i class="bi bi-house-door"></i>
+                                <span>Home</span>
+                            </a>
+                        </li>
+
+                        <!-- Information -->
+                        <li class="nav-item">
+                            <div class="nav-link" onclick="toggleSubmenu('mobile-information')">
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div>
+                                        <i class="bi bi-info-circle"></i>
+                                        <span>Information</span>
+                                    </div>
+                                    <div class="menu-arrow">⌵</div>
+                                </div>
+                            </div>
+                            <div class="submenu" id="mobile-information">
+                                <a href="#" class="nav-link ps-4">Tour Map</a>
+                                <a href="#" class="nav-link ps-4">Korea is</a>
+                                <a href="#" class="nav-link ps-4">Promotions</a>
+                            </div>
+                        </li>
+
+                        <!-- Community -->
+                        <li class="nav-item">
+                            <div class="nav-link" onclick="toggleSubmenu('mobile-community')">
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div>
+                                        <i class="bi bi-people"></i>
+                                        <span>Community</span>
+                                    </div>
+                                    <div class="menu-arrow">⌵</div>
+                                </div>
+                            </div>
+                            <div class="submenu" id="mobile-community">
+                                <a href="#" class="nav-link ps-4">Notice</a>
+                                <a href="#" class="nav-link ps-4">Free Board</a>
+                                <a href="#" class="nav-link ps-4">Q&A</a>
+                            </div>
                         </li>
                     </ul>
-                    <div class="d-none d-sm-block">
-                        <a class="btn-login" onclick="showLoginModal()">
-                            <span>Login</span>
-                        </a>
-                    </div>
+                </div>
+                <div class="d-none d-sm-block">
+                    <a class="btn-login" onclick="showLoginModal()">
+                        <span>Login</span>
+                    </a>
                 </div>
             </div>
         </nav>
@@ -71,26 +116,3 @@
 </body>
 </html>
 
-
-<style>
-    .btn-login {
-        background-color: white;
-        color: #333;
-        border: 1px solid #dadce0;
-        border-radius: 20px;
-        padding: 6px 16px;
-        display: flex;
-        align-items: center;
-        gap: 8px;
-        font-weight: 500;
-        text-decoration: none;
-        transition: all 0.3s ease;
-        cursor: pointer;
-    }
-
-        .btn-login:hover {
-            background-color: #f8f9fa;
-            transform: scale(1.05);
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-        }
-</style>
