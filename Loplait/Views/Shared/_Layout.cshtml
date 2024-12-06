@@ -43,18 +43,20 @@
                         </li>
                     </ul>
                     <div class="d-none d-sm-block">
-                            <a class="btn-login" onclick="showLoginModal()">
-                                <span>Login</span>
-                            </a>
+                        <a class="btn-login" onclick="showLoginModal()">
+                            <span>Login</span>
+                        </a>
                     </div>
                 </div>
             </div>
         </nav>
     </header>
-    <div class="container">
-        <main role="main" class="pb-3">
+
+    <div class="page-container">
+        @await Html.PartialAsync("_SideMenuPartial")
+        <div class="main-content">
             @RenderBody()
-        </main>
+        </div>
     </div>
 
     <footer class="border-top footer text-muted">
