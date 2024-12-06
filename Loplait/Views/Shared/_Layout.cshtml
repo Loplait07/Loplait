@@ -1,4 +1,6 @@
-﻿<!DOCTYPE html>
+﻿@await Html.PartialAsync("_LoginPartial")
+
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8" />
@@ -41,9 +43,9 @@
                         </li>
                     </ul>
                     <div class="d-none d-sm-block">
-                        <a class="btn-login" asp-area="" asp-controller="Account" asp-action="Login">
-                            <span>Login</span>
-                        </a>
+                            <a class="btn-login" onclick="showLoginModal()">
+                                <span>Login</span>
+                            </a>
                     </div>
                 </div>
             </div>
@@ -81,6 +83,7 @@
         font-weight: 500;
         text-decoration: none;
         transition: all 0.3s ease;
+        cursor: pointer;
     }
 
         .btn-login:hover {
