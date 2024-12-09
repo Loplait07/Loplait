@@ -198,3 +198,28 @@ body {
             display: block;
         }
 }
+
+
+/*google map*/
+#map {
+    height: 60%;
+    width: 40%; 
+}
+
+/*google map mobile*/
+@media (max-width: 768px) {
+    #map {
+        width: 100%; 
+        height: auto; 
+        padding-bottom: 100%;
+        position: relative;
+    }
+
+        #map > div {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+        }
+}
