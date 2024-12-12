@@ -155,14 +155,20 @@ body {
         transform: rotate(180deg);
     }
 
-.footer {
+/*.footer {
     background-color: white;
     height: 24px;
     line-height: 24px;
     text-align: center;
     border-top: 1px solid #edeff1;
     font-size: 11px;
-}
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}*/
+
 
 @media (max-width: 768px) {
     .sidebar {
@@ -200,11 +206,6 @@ body {
 }
 
 
-/*google map*/
-#map {
-    height: 60%;
-    width: 40%; 
-}
 
 /*google map mobile*/
 @media (max-width: 768px) {
