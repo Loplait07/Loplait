@@ -170,6 +170,7 @@ body {
 }*/
 
 
+/*sidebar*/
 @media (max-width: 768px) {
     .sidebar {
         display: none;
@@ -222,5 +223,21 @@ body {
             left: 0;
             right: 0;
             bottom: 0;
+        }
+}
+
+
+/*main - news*/
+@media (max-width: 768px) {
+    .main-section {
+        grid-template-columns: 1fr;
+    }
+
+    .main-new-content {
+        padding: 24px 20px;
+    }
+
+        .main-new-content h1 {
+            font-size: 32px;
         }
 }
