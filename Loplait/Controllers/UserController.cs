@@ -4,11 +4,11 @@ using System.Diagnostics;
 
 namespace Loplait.Controllers
 {
-    public class InfoCenterController : Controller
+    public class UserController : Controller
     {
-        private readonly ILogger<InfoCenterController> _logger;
+        private readonly ILogger<UserController> _logger;
 
-        public InfoCenterController(ILogger<InfoCenterController> logger)
+        public UserController(ILogger<UserController> logger)
         {
             _logger = logger;
         }
@@ -18,20 +18,11 @@ namespace Loplait.Controllers
             return View();
         }
 
-        public IActionResult TourMap()
+        public IActionResult Post()
         {
             return View();
         }
-
-        public IActionResult KoreaIs()
-        {
-            return View();
-        }
-
-        public IActionResult Promotions()
-        {
-            return View();
-        }
+        
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
