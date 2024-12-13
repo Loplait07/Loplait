@@ -48,16 +48,26 @@
                 <div class="menu-arrow">⌵</div>
             </div>
             <div class="submenu" id="community">
-                <a href="#" class="menu-item">
-                    <span>Notice</span>
+                <a class="menu-item" asp-area="" asp-controller="Community" asp-action="Notice">
+                    <div class="menu-title">
+                        <i class="bi bi-exclamation-circle"></i>
+                        <span>Notice</span>
+                    </div>
                 </a>
-                <a href="#" class="menu-item">
-                    <span>Free Board</span>
+                <a class="menu-item" asp-area="" asp-controller="Community" asp-action="FreeBoard">
+                    <div class="menu-title">
+                        <i class="bi bi-clipboard"></i>
+                        <span>Free Board</span>
+                    </div>
                 </a>
-                <a href="#" class="menu-item">
-                    <span>Q&A</span>
+                <a class="menu-item" asp-area="" asp-controller="Community" asp-action="QnA">
+                    <div class="menu-title">
+                        <i class="bi bi-question-circle"></i>
+                        <span>Q&A</span>
+                    </div>
                 </a>
             </div>
+
         </div>
     </div>
 </nav>
