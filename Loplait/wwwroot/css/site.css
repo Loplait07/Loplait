@@ -241,3 +241,25 @@ body {
             font-size: 32px;
         }
 }
+
+
+/*main image*/
+@media (max-width: 768px) {
+
+    .main-image {
+        width: 100% !important;
+    }
+
+        .main-image img {
+            width: 100%;
+            height: auto;
+        }
+
+    .main-section {
+        flex-direction: column;
+    }
+
+    .main-new-content {
+        padding: 20px 0;
+    }
+}
