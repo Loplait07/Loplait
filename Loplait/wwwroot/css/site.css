@@ -243,21 +243,16 @@ body {
 }
 
 
-/*main image*/
 @media (max-width: 768px) {
 
     .main-image {
-        width: 100%;
-        /*aspect-ratio: 350/233;*/ /* 원하는 비율 유지 */
-        border-radius: 16px;
-        overflow: hidden;
+        width: 100% !important;
     }
 
         .main-image img {
             width: 100%;
             height: 100%;
-            object-fit: cover;
-            object-position: center;
+            object-fit: contain;
         }
 
     .main-section {
