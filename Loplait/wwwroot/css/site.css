@@ -18,8 +18,8 @@ body {
     padding: 0;
     background-color: #ffffff;
     min-height: 100vh;
-    font-family: 'Lacquer', -apple-system, BlinkMacSystemFont, 'Roboto', 'Helvetica Neue', sans-serif;
-    /*font-family: 'Lacquer', cursive;*/
+    /*font-family: 'Lacquer', -apple-system, BlinkMacSystemFont, 'Roboto', 'Helvetica Neue', sans-serif;*/
+    font-family: 'Sallomae', cursive;
 }
 
 @font-face {
