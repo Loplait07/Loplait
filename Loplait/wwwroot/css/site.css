@@ -18,13 +18,14 @@ body {
     padding: 0;
     background-color: #ffffff;
     min-height: 100vh;
-    /*font-family: 'Lacquer', -apple-system, BlinkMacSystemFont, 'Roboto', 'Helvetica Neue', sans-serif;*/
-    font-family: 'Sallomae', cursive;
+    font-family: 'Lacquer', -apple-system, BlinkMacSystemFont, 'Roboto', 'Helvetica Neue', sans-serif;
+    /*font-family: 'Sallomae', cursive;*/
 }
 
 @media screen and (max-width: 768px) {
     body {
-        font-family: 'Source Sans 3', cursive;
+        font-family: 'Lacquer', -apple-system, BlinkMacSystemFont, 'Roboto', 'Helvetica Neue', sans-serif;
+        /*font-family: 'Source Sans 3', cursive;*/
     }
 }
 
